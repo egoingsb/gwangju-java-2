@@ -9,19 +9,22 @@ class Account{
 		return valueOfSupply+getVAT();
 	}
 }
+class AccountAddPrint extends Account{
+	public void print() {
+		System.out.println("Value Of Supply : "+valueOfSupply);
+		System.out.println("VAT  : "+getVAT());
+		System.out.println("Total  : "+ getTotal());
+	}
+}
 public class MyBizApp {
 	public static void main(String[] args) {
-		Account a1 = new Account();
+		AccountAddPrint a1 = new AccountAddPrint();
 		a1.valueOfSupply = 10000.0;
 		
-		Account a2 = new Account();
+		AccountAddPrint a2 = new AccountAddPrint();
 		a2.valueOfSupply = 20000.0;
 		
-		System.out.println("Value Of Supply a1 : "+a1.valueOfSupply);
-		System.out.println("Value Of Supply a2 : "+a2.valueOfSupply);
-		System.out.println("VAT  a1 : "+a1.getVAT());
-		System.out.println("VAT  a2 : "+a2.getVAT());
-		System.out.println("Total  a1 : "+ a1.getTotal());
-		System.out.println("Total  a2 : "+ a2.getTotal());
+		a1.print();
+		a2.print();
 	}
 }
