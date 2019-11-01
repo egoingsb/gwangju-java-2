@@ -1,6 +1,7 @@
+// java MyBizApp 10000
 public class MyBizApp {
 	public static void main(String[] args) {
-		double valueOfSupply = 10000.0;
+		double valueOfSupply = Double.parseDouble(args[0]);
 		double vatRate = 0.1;
 		double vat = 10000*vatRate;
 		double total = valueOfSupply+vat;
